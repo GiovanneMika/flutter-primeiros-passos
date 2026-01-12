@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hello_world/app_controller.dart';
-import 'package:hello_world/home_page.dart';
+// import 'package:hello_world/home_page.dart';
+import 'package:hello_world/login_page.dart';
 
 class AppWidget extends StatelessWidget {
   const AppWidget({super.key});
@@ -12,13 +13,13 @@ class AppWidget extends StatelessWidget {
       builder: (context, child) {
         return MaterialApp(
           theme: ThemeData(
-            primarySwatch: Colors.red,
+            primarySwatch: Colors.blue,
             brightness: AppController.instance.isDarkTheme
                 ? Brightness.dark
                 : Brightness.light,
             useMaterial3: false,
           ),
-          home: HomePage(),
+          home: LoginPage(),
         );
       },
     );

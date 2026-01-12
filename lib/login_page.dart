@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hello_world/home_page.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -23,6 +24,12 @@ class _LoginPageState extends State<LoginPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
+                Container(
+                  height: 200,
+                  width: 200,
+                  child: Image.asset('assets/images/logo.png'),
+                ),
+                SizedBox(height: 20),
                 TextField(
                   onChanged: (text) {
                     setState(() {
@@ -59,6 +66,7 @@ class _LoginPageState extends State<LoginPage> {
                   onPressed: () {
                     if (email == "admin@email.com" && password == "12345") {
                       print("correto");
+                      Navigator.of(context).pushReplacementNamed('/home');
                     } else {
                       print("Login inválido");
                     }

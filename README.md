@@ -1,16 +1,19 @@
 # hello_world
 
-A new Flutter project.
+Projeto de Flutter aprendendo as estruturas e componentes básicos do framework, sendo um primeiro contato com sua lógica de desenvolvimento.
 
-## Getting Started
+## Páginas
+O projeto consiste em basicamente 3 páginas:
 
-This project is a starting point for a Flutter application.
+### login_page.dart
+Página de login com fluxo básico de autenticação
 
-A few resources to get you started if this is your first Flutter project:
+### home_page.dart
+Tela inicial com testes e experimentação com as lógicas e widgets, com appBar e drawer.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### tinder_page.dart
+Tela de desafio proposto pelo professor do curso. É acessível a partir do login.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Autor
+- Baseado em aulas do professor  Jacob Moura, do Flutterando
+- Adaptado por Giovanne Mika

@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:hello_world/home_page.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -12,6 +10,7 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   String email = '';
   String password = '';
+  bool isTinder = false;
 
   Widget _body() {
     return Column(
@@ -127,17 +126,36 @@ class _LoginPageState extends State<LoginPage> {
                           if (email == "admin@email.com" &&
                               password == "12345") {
                             print("correto");
-                            Navigator.of(context).pushReplacementNamed('/home');
+                            isTinder
+                                ? Navigator.of(
+                                    context,
+                                  ).pushReplacementNamed('/tinder')
+                                : Navigator.of(
+                                    context,
+                                  ).pushReplacementNamed('/home');
                           } else {
                             print("Login inválido");
                           }
                         },
                         child: Text(
                           "Entrar",
-                          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 16,
+                          ),
                         ),
                       ),
                     ),
+                  ),
+                  Text("Modo Tinder:", style: TextStyle(color: Colors.white)),
+                  Switch(
+                    value: isTinder,
+                    activeColor: Colors.redAccent[700],
+                    onChanged: (value) {
+                      setState(() {
+                        isTinder = !isTinder;
+                      });
+                    },
                   ),
                 ],
               ),
